@@ -70,6 +70,13 @@ header {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
+.parent {
+  display: flex;
+  justify-content: space-between; /* pushes one left, one right */
+  align-items: center;            /* vertical align */
+}
+
+
 .name-box h1 {
   font-family: 'Unica One', sans-serif;
   font-size: 2.5rem;
@@ -82,6 +89,21 @@ header {
   color: var(--text-light);
   margin-top: 0.5rem;
 }
+
+.glass-box.contact {
+  display: auto;
+  font-family: 'Unica-One', sans-serif;
+  font-size: 150;
+  margin: left; /* vertical align */
+  margin-left: 20px;
+  padding: auto;
+  
+}
+
+.glass-box.contact img {
+  width: 100px;
+}
+
 
 .definition-box ol {
   font-family: 'Unica One', sans-serif;
