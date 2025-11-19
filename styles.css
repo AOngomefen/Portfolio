@@ -91,12 +91,12 @@ header {
 }
 
 .glass-box.contact {
-  display: auto;
+  display: 100px;
   font-family: 'Unica-One', sans-serif;
   font-size: 150;
   margin: left; /* vertical align */
   margin-left: 20px;
-  padding: auto;
+  padding: .5rem;
   
 }
 
@@ -171,4 +171,55 @@ header {
   60% {
     transform: translateY(3px);
   }
+}
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.carousel-track {
+  width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.project-card {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+
+.nav {
+  background: black;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.box {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle-buttons button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.carousel {
+    padding: 2rem;
+    border-radius: 16px;
+    
 }
