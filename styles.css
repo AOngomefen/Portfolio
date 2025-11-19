@@ -182,15 +182,31 @@ header {
 
 .carousel-track {
   width: 70%;
-  overflow: hidden;
+  overflow: show;
   white-space: nowrap;
 }
 
 .project-card {
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(173, 216, 230, 0.2); /* bluish tint */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: inline-block;
   width: 100%;
   vertical-align: top;
   text-align: center;
+  margin: 30px
+}
+
+.project-card p {
+    font-family: 'Unica One', sans-serif;
+    align-items: center;
+    
 }
 
 .nav {

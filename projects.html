@@ -35,67 +35,78 @@ function copyCode(index) {
     alert("Embed code copied!");
 }
 </script>
-<section class="projects">
-    <div class="glass-box nav-container"> <h1>My Projects</h1> </div>
-
-    <div class="carousel">
-        <button class="nav left" onclick="prevProject()"> <- </button>
-
-        <div class="carousel-track">
-
-            <!-- PROJECT 1 -->
-            <div class="project-card">
-                <h2>Global CO2 Emissions Analysis</h2>
-
-                <iframe
-                  src="https://nbviewer.org/github/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb"
-                  width="100%" height="350">
-                </iframe>
-
-                <p>
-                "This project analyzes global CO2 emissions from 2000 - 2014 to identify trends, high-emitting countries, and differences between developed and developing nations. Using visualizations such as line and bar plots, the analysis highlights a steady global increase in emissions and reveals that a small group of wealthy, industrialized countries contribute disproportionately to global output. The results emphasize the role of economic development in shaping national emission patterns."
-                </p>
-
-              .
-                <div id="code-box-0" class="box hidden">
-                    <pre><code id="embed-code-0">
-
-                    </code></pre>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects - Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+    <body>
+        <header>
+            <main>
+            <section class="projects">
+                <div class="glass-box nav-container"> <h1>My Projects</h1> </div>
+                
+                <div class="carousel">
+                    <button class="nav left" onclick="prevProject()"> <- </button>
+                        
+                        <div class="carousel-track">
+                            
+                            <!-- PROJECT 1 -->
+                            <div class="project-card">
+                                <h2>Global CO2 Emissions Analysis</h2>
+                                
+                                <iframe
+                                    src="https://nbviewer.org/github/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb"
+                                    width="100%" height="350">
+                                </iframe>
+                                <p>
+                                "This project analyzes global CO2 emissions from 2000 - 2014 to identify trends, high-emitting countries, and differences between developed and developing nations. Using visualizations such as line and bar plots, the analysis highlights a steady global increase in emissions and reveals that a small group of wealthy, industrialized countries contribute disproportionately to global output. The results emphasize the role of economic development in shaping national emission patterns."
+                                </p>
+                                
+                                <div id="code-box-0" class="box hidden">
+                                    <pre><code id="embed-code-0">
+                                        
+                                    </code></pre>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- Add More Projects Here -->
+                            <div class="project-card">
+                                <h2>Project 2 Title</h2>
+                                <iframe
+                                    src="YOUR_NEXT_PROJECT_LINK"
+                                    width="100%" height="350">
+                                </iframe>
+                                <p>Short description of project 2.</p>
+                            </div>
+                            
+                            <div class="project-card">
+                                <h2>Project 3 Title</h2>
+                                <iframe
+                                    src="YOUR_NEXT_PROJECT_LINK"
+                                    width="100%" height="350">
+                                </iframe>
+                                <p>Short description of project 3.</p>
+                            </div>
+                            
+                            <div class="project-card">
+                                <h2>Project 3 Title</h2>
+                                <iframe
+                                    src="YOUR_NEXT_PROJECT_LINK"
+                                    width="100%" height="350">
+                                </iframe>
+                                <p>Short description of project 3.</p>
+                            </div>
+                            
+                        </div>
+                        
+                        <button class="nav right" onclick="nextProject()"> -> </button>
                 </div>
-
-            </div>
-
-            <!-- Add More Projects Here -->
-            <div class="project-card">
-                <h2>Project 2 Title</h2>
-                <iframe
-                  src="YOUR_NEXT_PROJECT_LINK"
-                  width="100%" height="350">
-                </iframe>
-                <p>Short description of project 2.</p>
-            </div>
-
-            <div class="project-card">
-                <h2>Project 3 Title</h2>
-                <iframe
-                  src="YOUR_NEXT_PROJECT_LINK"
-                  width="100%" height="350">
-                </iframe>
-                <p>Short description of project 3.</p>
-            </div>
-            
-            <div class="project-card">
-                <h2>Project 3 Title</h2>
-                <iframe
-                  src="YOUR_NEXT_PROJECT_LINK"
-                  width="100%" height="350">
-                </iframe>
-                <p>Short description of project 3.</p>
-            </div>
-
-        </div>
-
-        <button class="nav right" onclick="nextProject()"> -> </button>
-    </div>
-</section>
-
+            </section>
+            </main>
+            <footer>
+                <p>&copy; 2023 Your Name. All rights reserved.</p>
+            </footer>
+    </body>
+</html>
