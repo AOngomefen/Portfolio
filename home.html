@@ -1,178 +1,502 @@
-<script>
-function openPopup() {
-    document.getElementById('popupOverlay').style.display = 'block';
-    document.getElementById('miniPopup').style.display = 'block';
+<link rel="stylesheet" href="style.css">
+/* Importing Unica One from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
+:root {
+  --primary: #4B2354;     /* deep plum */
+  --accent: #F2DADF;      /* blush pink */
+  --bg-light: #FAF9F6;    /* ivory */
+  --text-dark: #2B2B2B;   /* near-black */
+  --text-light: #666;
+  --font-display: 'Unica One', sans-serif;
+  --font-body: 'Unica One', sans-serif;
 }
 
-function closePopup() {
-    document.getElementById('popupOverlay').style.display = 'none';
-    document.getElementById('miniPopup').style.display = 'none';
-}
-</script>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about me on this page.">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99bd0df14afd5606cefd4421884aad8a30e838c5
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <div class="home-bg"> </div>
-</head>
-<body>
+/* ____________________about me page ______________________*/
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <header>
-        <div class="nav-home glass-box">
-             <nav>
-                  <h2> Explore! </h2> <br/> <p> <a href="projects.html">Projects</a> | <a href="contacts.html">About Me</a> </p>
-             </nav>
-           </div>
-    </header>
-    <main>
-        
-            <div class="window-exe glass-box">
-                <a href="projects.html"> <embed class="window"  src="https://flylib.com/books/1/467/1/html/2/images/noise_filter_10.jpg"> </embed> </a>
+ .spline-bg { /*
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  z-index: -1;           /* behind everything */
+  pointer-events: none; */  /* allow clicks through it */
+}
+
+.new-bg {
+    background-image: url("https://i.pinimg.com/1200x/ae/bf/a9/aebfa91a1417c224aee703ef66fc454d.jpg");
+    background-size: cover;         /* fills width + expands vertically */
+    background-repeat: no-repeat;
+    background-attachment: scroll;   /* stays fixed while scrolling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    z-index: -1;
+}
+
+
+
+/* Container Styles */
+header {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.nav-container {
+  margin: 0 auto;              /* center horizontally */
+  text-align: center;          /* center text inside */
+  max-width: 600px;            /* optional: control width */
+  padding: 0.5rem;          /* optional: space inside */
+  display: flex;
+  justify-content: right;
+}
+
+.nav-container nav p {
+  font-family: 'Unica One', sans-serif;
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.nav-container nav a {
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+.glass-box {
+  width: fit-content;
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(173, 216, 230, 0.2); /* bluish tint */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glass-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.parent {
+  display: flex;
+  justify-content: space-between; /* pushes one left, one right */
+  align-items: center;            /* vertical align */
+}
+
+
+.name-box h1 {
+  font-family: 'Unica One', sans-serif;
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.name-box h3 {
+  font-family: 'Unica One', sans-serif;
+  font-weight: 300;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+.glass-box.contact {
+  display: 100px;
+  font-family: 'Unica-One', sans-serif;
+  font-size: 150;
+  margin: left; /* vertical align */
+  margin-left: 20px;
+  padding: .5rem;
+  
+}
+
+.glass-box.contact img {
+  width: 100px;
+}
+
+
+.definition-box ol {
+  font-family: 'Unica One', sans-serif;
+  margin-left: 1.2rem;
+  font-weight: 300;
+  color: var(--text-dark);
+}
+
+.definition-box h4 {
+  font-family: 'Unica One', sans-serif;
+  margin-top: 1rem;
+  font-weight: 400;
+  color: var(--primary);
+}
+/* Container for both columns */
+.columns {
+    display: flex;               /* side by side */
+    flex-direction: row;
+    justify-content: space-between; /* space between left & right */
+    align-items: flex-start;     /* top-align content */
+    gap: 20px;                   /* space between columns */
+    flex-wrap: wrap;             /* stack on smaller screens */
+    margin: 20px;
+}
+
+/* Left column (bio) */
+.bio.glass-box {
+    flex: 1 1 45%;              /* grow/shrink, base width 45% */
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.1);  /* optional glass effect */
+    border-radius: 12px;
+    font-family: 'Unica One', sans-serif;
+    min-width: 300px;
+}
+
+/* Right column (tech stack) */
+.right-column {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+}
+
+/* Tech stack box inside right column */
+.stack.glass-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    font-family: 'Unica One', sans-serif;
+}
+
+/* Tech icons */
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icons i {
+    font-size: 2rem;
+}
+/* Responsive layout */
+@media (max-width: 768px) {
+  .glass-box {
+    padding: 1.5rem;
+  }
+
+  .name-box h1 {
+    font-size: 2rem;
+  }
+
+  .definition-box h4 {
+    font-size: 1rem;
+  }
+}
+/* Parent container */
+.beach-exe {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    transform: translate(-50%, -50%);   /* perfect centering */
     
-        </div>
-            <div class="profile-icon glass-box">
-                <a href="contacts.html">
-                    <img src="https://files.softicons.com/download/application-icons/msn-icons-by-chris-scholten/png/256x256/online-girl.png"
-                         alt="Profile Icon">
-                </a>
-            </div>
-            
-            <div class="email-icon glass-box">
-                <a href="mailto:andreaongomefen@gmail.com">
-                    <img src="https://png.pngtree.com/png-vector/20250423/ourmid/pngtree-cute-pink-envelope-with-white-flap-and-soft-corners-png-image_16041102.png"
-                         alt="Email Icon">
-                </a>
-            </div>
-            
-            
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
 
-            
-        
-    </main>
-    <footer>
-        <div class="home-footer">
-                <p>andrea[@]ongomefen.com | Please reach out via email or phone for inquiries.</p>
-        <p>&copy; 2023 Your Name</p>
-        </div>
-<<<<<<< HEAD
-=======
-=======
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
-</head>
-<body>
-   <!-- <iframe
-      class="spline-bg"
-      src="https://my.spline.design/portbg-OKmY0kJ1rSPRTbkE1otWWy6U/"
-      frameborder="0"
-      allow="fullscreen"
-    ></iframe> -->
-   <div class="new-bg" > </div>
-    <header>
-        <div class="glass-box nav-container">
-             <nav>
-                   <p>  <a href="more.html">Contact Me</a> | <a href="projects.html">Projects</a>  </p>
-             </nav>
-           </div>
-      <div class="parent">
-       <div class="glass-box name-box">
-         <h1>Andrea Ongomefen</h1>
-         <h3>[ <i>/ˈɒn.dri.ə ˌɑn.goʊˈmɛ.fən/</i> ]</h3>
-         <h3><b>noun</b></h3>
-       </div>
-        <div class = "glass-box contact">
-            <a href="contact.html"> <img src="https://www.freeiconspng.com/uploads/email-icon--endless-icons-20.png" <alt="email"> </a>
-        </div>
-       </div>
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-       <div class="glass-box definition-box">
-         <ol>
-           <li>A multidisciplinary creative and technical professional specializing in web development, UI/UX design, and data analytics.</li>
-           <li>Known for translating complex data into engaging digital experiences with clarity, structure, and style.</li>
-           <li>Combines an analytical mindset with a creative process to design intuitive, user-focused solutions that are as elegant as they are efficient.</li>
-         </ol>
-         <br />
-         <h4><b>Fields:</b> Front-end Development, Data Visualization, UX Strategy, Creative Systems Design</h4>
-         <h4><b>Tech Stack:</b> HTML5/CSS3, Java, R, C++, Figma, SQL, Tableau, Spline & Many More </h4>
-       </div>
-       
-    </header>
-    <main>
-        <a href="#next-section" class="scroll-down-glass">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-               stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </a>
-        </br>
-        </br>
-        </br>
-        <section id="next-section" class="two-column-section">
+    padding: 0.5rem;
+    border-radius: 16px;
+    text-align: center;
+    font-family: 'Unica One', sans-serif;
 
-            <div class="columns">
-                <!-- LEFT COLUMN -->
-                <div class="bio glass-box">
-                    <h2>Who I Am</h2>
-                    <p>As a second-generation Cameroonian-American woman in tech, I’m driven by the intersection of analytical problem-solving and digital creativity. With a foundation in front-end development, data visualization, and UX/UI strategy, I’ve contributed to multiple cross-functional projects—including building two apps, Addison and Gigi, that center usability and performance.
-                    <br/>
-                    Whether I’m designing sleek interfaces in Figma and Spline, cleaning and structuring large datasets in SQL, Python and R, or strategizing user journeys, my goal remains the same: to make technology both powerful and personal. I’ve developed web portfolios and immersive 3D models for marketing and branding, blending design systems with user logic.
-                    <br/>
-                    Currently specializing in data analytics and pursuing a path toward data engineering, I thrive at the crossroads of clean data pipelines and purposeful UI. My Java and Communications professors have praised my initiative, deep engagement with technical material, and exceptional organization of large-scale projects.
-                    <br/>
-                    Certifications & Honors:
-                    Seal of Biliteracy in French
-                    Recognized for Academic Excellence in Data Analytics & Computer Science Tracks
-                    </p>
-                </div>
+    background: rgba(255, 255, 255, 0.1); /* optional backdrop */
+    backdrop-filter: blur(8px);           /* optional glass effect */
+}
 
-                <!-- RIGHT COLUMN -->
-                <div class="right-column">
-                    <div class="stack glass-box">
-                        <!-- LinkedIn Badge -->
-                        <div class="badge-base LI-profile-badge"
-                             data-locale="en_US"
-                             data-size="large"
-                             data-theme="light"
-                             data-type="VERTICAL"
-                             data-vanity="andrea-ongomefen-5a796a2b1">
-                        </div>
-                        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+/* Child element centered inside the parent */
+.beach {
+    width: 300px;
+    height: 300px;            /* slightly smaller so it fits inside */
+    border-radius: 16px;
+    background: transparent;        /* or whatever you want */
+    z-index: 2;
+}
+.scroll-down-glass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem;
+  color: var(--primary);
+  text-decoration: none;
+  border-radius: 50%;
+  background: rgba(173, 216, 230, 0.2); /* light bluish tint */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto 0;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  transition: all 0.3s ease;
+}
 
-                        <h2>Tech Stack: </h2>
-                        <div class="icons">
-                            <i class="devicon-cplusplus-plain"></i>
-                            <i class="devicon-python-plain"></i>
-                            <i class="devicon-java-plain"></i>
-                            <i class="devicon-azuresqldatabase-plain"></i>
-                            <i class="devicon-pandas-plain"></i>
-                            <i class="devicon-html5-plain"></i>
-                            <i class="devicon-css3-plain"></i>
-                            <i class="devicon-github-original"></i>
-                            <i class="devicon-figma-plain"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+.scroll-down-glass:hover {
+  transform: translateY(6px);
+  background: rgba(173, 216, 230, 0.3);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  color: var(--text-dark);
+}
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(6px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
 
-        </section>
+/* ______________________ home Page_______________________ */
 
-        
-    </main>
-    <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
->>>>>>> 674ed3bad73e4677f7ee073315666e65a198bc51
->>>>>>> 99bd0df14afd5606cefd4421884aad8a30e838c5
-    </footer>
-</body>
-</html>
+.home-bg {
+    background-image: url("https://i.pinimg.com/736x/29/b9/fb/29b9fb51905af8eeaa3e49b4f41d1d89.jpg");
+    background-size: cover;         /* fills width + expands vertically */
+    background-repeat: no-repeat;
+    background-attachment: scroll;   /* stays fixed while scrolling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    z-index: -1;
+}
 
+/* Parent container */
+.window-exe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   /* perfect centering */
+    
+    width: 700px;
+    height: 400px;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5rem;
+    border-radius: 16px;
+    text-align: center;
+    font-family: 'Unica One', sans-serif;
+
+    background: rgba(255, 255, 255, 0.1); /* optional backdrop */
+    backdrop-filter: blur(8px);           /* optional glass effect */
+}
+
+/* Child element centered inside the parent */
+.window {
+    width: 680px;
+    height: 380px;            /* slightly smaller so it fits inside */
+    border-radius: 16px;
+    background: transparent;        /* or whatever you want */
+    z-index: 2;
+}
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.popup-box {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above the overlay */
+    max-width: 400px; /* Example size */
+    text-align: center;
+}
+.nav-home, .nav-home p, .nav-home h2 {
+    width:flex;
+    height:flex;
+    z-index: 1000;
+    text-align: center;
+    font-family: 'Unica One', sans-serif;
+    
+}
+.home-footer, .home-footer p {
+    
+    width:100%;
+    height:auto;
+    text-align: bottom, center;
+    font-family: 'Unica One', sans-serif;
+    
+}
+.profile-icon {
+    position: fixed;
+    left: 15%;               /* moves it left/right within bottom-left quadrant */
+    bottom: 20%;             /* moves it up from the bottom so it's centered vertically */
+    transform: translate(-50%, 50%); /* perfect centering in that quadrant */
+    z-index: 9999;           /* stays above other elements */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    margin: 0;
+}
+
+.profile-icon img {
+    width: 90px;             /* adjust icon size here */
+    height: 90px;
+    border-radius: 18px;     /* optional — makes it rounded like an app icon */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.profile-icon img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+.email-icon {
+    position: fixed;
+    left: 22%;               /* moves it left/right within bottom-left quadrant */
+    bottom: 20%;             /* moves it up from the bottom so it's centered vertically */
+    transform: translate(-50%, 50%); /* perfect centering in that quadrant */
+    z-index: 9999;           /* stays above other elements */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    margin: 0;
+}
+
+.email-icon img {
+    width: 90px;             /* adjust icon size here */
+    height: 90px;
+    border-radius: 18px;     /* optional — makes it rounded like an app icon */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.email-icon img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+/* _______________________Projects Page_________________________*/
+.pr-bg {
+    background-image: url("https://i.pinimg.com/1200x/dd/3d/bc/dd3dbc2540c96c85c14836bf4b560762.jpg");
+    background-size: cover;         /* fills width + expands vertically */
+    background-repeat: no-repeat;
+    background-attachment: scroll;   /* stays fixed while scrolling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    z-index: -1;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.carousel-track {
+  width: 70%;
+  overflow: show;
+  white-space: nowrap;
+}
+
+.project-card {
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(173, 216, 230, 0.2); /* bluish tint */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+  margin: 30px
+}
+
+.project-card p {
+    font-family: 'Unica One', sans-serif;
+    align-items: center;
+    
+}
+
+.nav {
+  background: black;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.box {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle-buttons button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.carousel {
+    padding: 2rem;
+    border-radius: 16px;
+    
+}
