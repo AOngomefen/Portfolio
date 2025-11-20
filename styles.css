@@ -279,7 +279,7 @@ header {
 /* ______________________ home Page_______________________ */
 
 .home-bg {
-    background-image: url("https://i.pinimg.com/736x/29/b9/fb/29b9fb51905af8eeaa3e49b4f41d1d89.jpg");
+    background-image: url("https://i.pinimg.com/736x/44/d4/71/44d4713e3279b13500cae6671c0cf3a5.jpg");
     background-size: cover;         /* fills width + expands vertically */
     background-repeat: no-repeat;
     background-attachment: scroll;   /* stays fixed while scrolling */
@@ -295,7 +295,7 @@ header {
 /* Parent container */
 .window-exe {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);   /* perfect centering */
     
@@ -338,9 +338,9 @@ header {
 .popup-box {
     display: none; /* Hidden by default */
     position: fixed;
-    top: 50%;
+    top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the popup */
+    transform: translate(-30%, -30%); /* Center the popup */
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -349,20 +349,85 @@ header {
     max-width: 400px; /* Example size */
     text-align: center;
 }
-.nav-home, .nav-home p, .nav-home h2 {
-    width:flex;
-    height:flex;
-    z-index: 1000;
-    text-align: center;
-    font-family: 'Unica One', sans-serif;
+.top-right {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    right: 50%;
     
+    align-items: center;
+    float: center;
+
+    display: inline-block;
+    white-space: nowrap;
+
+    padding: 12px 18px;
+
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+
+    z-index: 999;
+
+    font-family: 'Verdana', sans-serif;   /* Apply everywhere */
+    color: hotpink;                             /* Pink text */
 }
+
+/* Title */
+.nav-home h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: pink;
+    letter-spacing: 1px;
+}
+
+/* Paragraph style */
+.nav-home p {
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+    color: pink;
+}
+
+/* Links */
+.nav-home a {
+    color: pink;
+    text-decoration: none;
+}
+
+.nav-home a:hover {
+    text-decoration: underline;
+}
+.github-glass {
+  padding: 8px 10px;
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 14px;
+  transition: 0.2s ease;
+  float:right;
+}
+
+.github-glass:hover {
+  background: rgba(255,255,255,0.12);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255,122,217,0.25);
+}
+
 .home-footer, .home-footer p {
     
     width:100%;
     height:auto;
     text-align: bottom, center;
     font-family: 'Unica One', sans-serif;
+    position: fixed;
+    bottom: 0%;
+    
     
 }
 .profile-icon {
@@ -417,7 +482,35 @@ header {
     transform: scale(1.08);
     box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
+.folder-icon {
+    position: fixed;
+    right: 20%;               /* moves it left/right within bottom-left quadrant */
+    top: 15%;             /* moves it up from the bottom so it's centered vertically */
+    transform: translate(-50%, 50%); /* perfect centering in that quadrant */
+    z-index: 9999;           /* stays above other elements */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    margin: 0;
+}
 
+.folder-icon img {
+    width: 90px;             /* adjust icon size here */
+    height: 90px;
+    border-radius: 18px;     /* optional — makes it rounded like an app icon */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.folder-icon img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+.home-footer {
+    
+}
 /* _______________________Projects Page_________________________*/
 .pr-bg {
     background-image: url("https://i.pinimg.com/1200x/dd/3d/bc/dd3dbc2540c96c85c14836bf4b560762.jpg");
