@@ -60,87 +60,67 @@
         .hidden { display: none; }
     </style>
 </head>
-
 <body>
     <header>
         <div class="pr-bg"> </div>
     </header>
 
     <main>
-        <section class="projects">
-            <h1>My Projects</h1>
+        <section class="project-gallery">
+            <div class="project-card active glass-box">
+                <h2>Global CO2 Emissions</h2>
+                <iframe src="https://nbviewer.org/github/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb"></iframe>
+                <p>Global CO₂ emissions analysis 2000–2014, trends & comparisons.</p>
+            </div>
 
-            <div class="carousel">
-                <button class="nav left" onclick="prevProject()">&#8592;</button>
+            <div class="project-card glass-box">
+                <h2>Project 2</h2>
+                <iframe src="YOUR_PROJECT_2_LINK"></iframe>
+                <p>Short description of Project 2.</p>
+            </div>
 
-                <div class="carousel-track">
-                    
-                    <!-- PROJECT 1 -->
-                    <div class="project-card">
-                        <h2>Global CO2 Emissions Analysis</h2>
+            <div class="project-card glass-box">
+                <h2>About Me</h2> <a href="contacts.html">
+                <img class="night-sky" src="https://i.pinimg.com/736x/15/45/25/1545251bd5e765724bffe0f4d9567080.jpg " alt="night sky" border-radius="14px" > </a>
+                <p>Learn more about me and reach out!</p>
+            </div>
 
-                        <iframe src="https://nbviewer.org/github/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb"></iframe>
-
-                        <p>
-                            This project analyzes global CO2 emissions from 2000 - 2014<br\> to identify trends, high-emitting countries, and differences <br\>between developed and developing nations.
-                        </p>
-                    </div>
-
-                    <!-- PROJECT 2 -->
-                    <div class="project-card">
-                        <h2>Project 2 Title</h2>
-                        <iframe src="YOUR_NEXT_PROJECT_LINK"></iframe>
-                        <p>Short description of project 2.</p>
-                    </div>
-
-                    <!-- PROJECT 3 -->
-                    <div class="project-card">
-                        <h2>Project 3 Title</h2>
-                        <iframe src="YOUR_NEXT_PROJECT_LINK"></iframe>
-                        <p>Short description of project 3.</p>
-                    </div>
-
-                    <!-- PROJECT 4 -->
-                    <div class="project-card">
-                        <a href="NotWavingButDrowning.html">
-                            <h2>Not Waving, But Drowning</h2>
-                        </a>
-
-                        <iframe src="NotWavingButDrowning.html"></iframe>
-
-                        <p>Short description of project 4.</p>
-                    </div>
-                </div>
-
-                <button class="nav right" onclick="nextProject()">&#8594;</button>
+            <div class="gallery-nav">
+                <button class="prev" onclick="prevSlide()">‹</button>
+                <button class="next" onclick="nextSlide()">›</button>
             </div>
         </section>
+
     </main>
 
     <footer>
         <p>&copy; 2023 Your Name. All rights reserved.</p>
     </footer>
-
     <script>
-        let current = 0;
-        const cards = document.querySelectorAll(".project-card");
-        const track = document.querySelector(".carousel-track");
+        let currentSlide = 0;
 
-        function updateCarousel() {
-            track.style.transform = `translateX(-${current * 100}%)`;
+        // Select slides AFTER DOM is loaded
+        const slides = document.querySelectorAll(".project-gallery .project-card");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                if (i === index) slide.classList.add("active");
+            });
         }
 
-        function nextProject() {
-            current = (current + 1) % cards.length;
-            updateCarousel();
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
         }
 
-        function prevProject() {
-            current = (current - 1 + cards.length) % cards.length;
-            updateCarousel();
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
         }
 
-        updateCarousel();
+        // Optional: autoplay every 5 seconds
+       /* setInterval(() => nextSlide(), 5000); */
     </script>
 </body>
 </html>
