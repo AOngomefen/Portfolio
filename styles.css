@@ -204,6 +204,38 @@ header {
     font-size: 1rem;
   }
 }
+/* Parent container */
+.beach-exe {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    transform: translate(-50%, -50%);   /* perfect centering */
+    
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5rem;
+    border-radius: 16px;
+    text-align: center;
+    font-family: 'Unica One', sans-serif;
+
+    background: rgba(255, 255, 255, 0.1); /* optional backdrop */
+    backdrop-filter: blur(8px);           /* optional glass effect */
+}
+
+/* Child element centered inside the parent */
+.beach {
+    width: 300px;
+    height: 300px;            /* slightly smaller so it fits inside */
+    border-radius: 16px;
+    background: transparent;        /* or whatever you want */
+    z-index: 2;
+}
 .scroll-down-glass {
   display: flex;
   justify-content: center;
@@ -243,74 +275,8 @@ header {
     transform: translateY(3px);
   }
 }
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  position: relative;
-}
 
-.carousel-track {
-  width: 70%;
-  overflow: show;
-  white-space: nowrap;
-}
-
-.project-card {
-  max-width: 700px;
-  padding: 2rem;
-  border-radius: 16px;
-  background: rgba(173, 216, 230, 0.2); /* bluish tint */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  display: inline-block;
-  width: 100%;
-  vertical-align: top;
-  text-align: center;
-  margin: 30px
-}
-
-.project-card p {
-    font-family: 'Unica One', sans-serif;
-    align-items: center;
-    
-}
-
-.nav {
-  background: black;
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 8px;
-}
-
-.box {
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-.hidden {
-  display: none;
-}
-
-.toggle-buttons button {
-  margin: 5px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-.carousel {
-    padding: 2rem;
-    border-radius: 16px;
-    
-}
-/* ______________________ Contacts Page_______________________ */
+/* ______________________ home Page_______________________ */
 
 .home-bg {
     background-image: url("https://i.pinimg.com/736x/29/b9/fb/29b9fb51905af8eeaa3e49b4f41d1d89.jpg");
@@ -454,7 +420,7 @@ header {
 
 /* _______________________Projects Page_________________________*/
 .pr-bg {
-    background-image: url("https://i.pinimg.com/736x/6c/7b/e9/6c7be9a734a6ee0337e087464a081c99.jpg");
+    background-image: url("https://i.pinimg.com/1200x/dd/3d/bc/dd3dbc2540c96c85c14836bf4b560762.jpg");
     background-size: cover;         /* fills width + expands vertically */
     background-repeat: no-repeat;
     background-attachment: scroll;   /* stays fixed while scrolling */
@@ -466,4 +432,71 @@ header {
     border: none;
     z-index: -1;
 }
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.carousel-track {
+  width: 70%;
+  overflow: show;
+  white-space: nowrap;
+}
+
+.project-card {
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(173, 216, 230, 0.2); /* bluish tint */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+  margin: 30px
+}
+
+.project-card p {
+    font-family: 'Unica One', sans-serif;
+    align-items: center;
+    
+}
+
+.nav {
+  background: black;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.box {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle-buttons button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.carousel {
+    padding: 2rem;
+    border-radius: 16px;
+    
 }
