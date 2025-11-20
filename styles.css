@@ -508,6 +508,49 @@ header {
     transform: scale(1.08);
     box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
+.icon-glass {
+  padding: 8px;
+  margin:.5rem;
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 14px;
+  transition: 0.2s ease;
+  float:right;
+}
+.icon-glass img {
+    position: fixed;
+    top: 10%;
+    right: 8%;
+    width: 180px;             /* adjust icon size here */
+    height: 180px;
+    border-radius: 100px;     /* optional — makes it rounded like an app icon */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.icon-glass img:hover {
+  background: rgba(255,255,255,0.12);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255,122,217,0.25);
+}
+
+.home-footer, .home-footer p {
+    
+    width:100%;
+    height:auto;
+    text-align: bottom, center;
+    font-family: 'Unica One', sans-serif;
+    position: fixed;
+    bottom: 0%;
+    
+    
+}
 .home-footer {
     
 }
