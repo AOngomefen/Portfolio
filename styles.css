@@ -11,7 +11,7 @@
   --font-display: 'Unica One', sans-serif;
   --font-body: 'Unica One', sans-serif;
 }
-.spline-bg {
+.new-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -159,6 +159,18 @@ header {
   background: rgba(173, 216, 230, 0.3);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
   color: var(--text-dark);
+}
+
+.glass-box stack-container {
+    align-items:center;
+    margin: 10px;
+    font-family:'Unica One', sans-serif;
+    font-size: 20px;
+    
+}
+.glass-box stack-container i, {
+    size: 40px;
+    align-items: center;
 }
 
 @keyframes bounce {
