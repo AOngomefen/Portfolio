@@ -12,6 +12,8 @@
   --font-body: 'Unica One', sans-serif;
 }
 
+/* ____________________about me page ______________________*/
+
  .spline-bg { /*
   position: fixed;
   top: 0;
@@ -307,4 +309,32 @@ header {
     padding: 2rem;
     border-radius: 16px;
     
+}
+/* ______________________ Contacts Page_______________________ */
+
+.contacts-bg {
+    background-image: url("https://i.pinimg.com/1200x/ae/bf/a9/aebfa91a1417c224aee703ef66fc454d.jpg");
+    background-size: cover;         /* fills width + expands vertically */
+    background-repeat: no-repeat;
+    background-attachment: scroll;   /* stays fixed while scrolling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    z-index: -1;
+}
+
+.email-exe glass-box, .email-exe p {
+    justify-content: center;
+    float: center;
+    size: flex;
+    
+    
+}
+.email {
+    z-index: -1;
+    border: none;
+    float: center;
 }
