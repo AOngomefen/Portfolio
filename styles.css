@@ -312,8 +312,8 @@ header {
 }
 /* ______________________ Contacts Page_______________________ */
 
-.contacts-bg {
-    background-image: url("https://i.pinimg.com/1200x/ae/bf/a9/aebfa91a1417c224aee703ef66fc454d.jpg");
+.home-bg {
+    background-image: url("https://i.pinimg.com/736x/29/b9/fb/29b9fb51905af8eeaa3e49b4f41d1d89.jpg");
     background-size: cover;         /* fills width + expands vertically */
     background-repeat: no-repeat;
     background-attachment: scroll;   /* stays fixed while scrolling */
@@ -326,15 +326,144 @@ header {
     z-index: -1;
 }
 
-.email-exe glass-box, .email-exe p {
-    justify-content: center;
-    float: center;
-    size: flex;
+/* Parent container */
+.window-exe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   /* perfect centering */
     
+    width: 700px;
+    height: 400px;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5rem;
+    border-radius: 16px;
+    text-align: center;
+    font-family: 'Unica One', sans-serif;
+
+    background: rgba(255, 255, 255, 0.1); /* optional backdrop */
+    backdrop-filter: blur(8px);           /* optional glass effect */
+}
+
+/* Child element centered inside the parent */
+.window {
+    width: 680px;
+    height: 380px;            /* slightly smaller so it fits inside */
+    border-radius: 16px;
+    background: transparent;        /* or whatever you want */
+    z-index: 2;
+}
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.popup-box {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above the overlay */
+    max-width: 400px; /* Example size */
+    text-align: center;
+}
+.nav-home, .nav-home p, .nav-home h2 {
+    width:flex;
+    height:flex;
+    z-index: 1000;
+    text-align: center;
+    font-family: 'Unica One', sans-serif;
     
 }
-.email {
-    z-index: -1;
+.home-footer, .home-footer p {
+    
+    width:100%;
+    height:auto;
+    text-align: bottom, center;
+    font-family: 'Unica One', sans-serif;
+    
+}
+.profile-icon {
+    position: fixed;
+    left: 15%;               /* moves it left/right within bottom-left quadrant */
+    bottom: 20%;             /* moves it up from the bottom so it's centered vertically */
+    transform: translate(-50%, 50%); /* perfect centering in that quadrant */
+    z-index: 9999;           /* stays above other elements */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    margin: 0;
+}
+
+.profile-icon img {
+    width: 90px;             /* adjust icon size here */
+    height: 90px;
+    border-radius: 18px;     /* optional — makes it rounded like an app icon */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.profile-icon img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+.email-icon {
+    position: fixed;
+    left: 22%;               /* moves it left/right within bottom-left quadrant */
+    bottom: 20%;             /* moves it up from the bottom so it's centered vertically */
+    transform: translate(-50%, 50%); /* perfect centering in that quadrant */
+    z-index: 9999;           /* stays above other elements */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    margin: 0;
+}
+
+.email-icon img {
+    width: 90px;             /* adjust icon size here */
+    height: 90px;
+    border-radius: 18px;     /* optional — makes it rounded like an app icon */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.email-icon img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+/* _______________________Projects Page_________________________*/
+.pr-bg {
+    background-image: url("https://i.pinimg.com/736x/6c/7b/e9/6c7be9a734a6ee0337e087464a081c99.jpg");
+    background-size: cover;         /* fills width + expands vertically */
+    background-repeat: no-repeat;
+    background-attachment: scroll;   /* stays fixed while scrolling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     border: none;
-    float: center;
+    z-index: -1;
+}
 }

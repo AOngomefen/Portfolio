@@ -1,3 +1,14 @@
+<script>
+function openPopup() {
+    document.getElementById('popupOverlay').style.display = 'block';
+    document.getElementById('miniPopup').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popupOverlay').style.display = 'none';
+    document.getElementById('miniPopup').style.display = 'none';
+}
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,30 +16,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <div class="home-bg"> </div>
 </head>
 <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <header>
-        <div class="contacts-bg"> </div>
-        <h1>Contact Me</h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-        </nav>
-        
-            
+        <div class="nav-home glass-box">
+             <nav>
+                  <h2> Explore! </h2> <br/> <p> <a href="projects.html">Projects</a> | <a href="contacts.html">About Me</a> </p>
+             </nav>
+           </div>
     </header>
     <main>
-            <div class="email-exe glass-box">
-                <iframe class="email"  src="https://i.pinimg.com/736x/69/85/c7/6985c764a06557a7a04fa8a7d6c9ca51.jpg"
-                    width='300' height='100'> </iframe>
+        
+            <div class="window-exe glass-box">
+                <a href="projects.html"> <embed class="window"  src="https://i.pinimg.com/736x/62/1a/4b/621a4b6a7b3e3ff5f2fc1ffb1aa1e8dc.jpg"> </embed> </a>
+    
+        </div>
+            <div class="profile-icon glass-box">
+                <a href="contacts.html">
+                    <img src="https://files.softicons.com/download/application-icons/msn-icons-by-chris-scholten/png/256x256/online-girl.png"
+                         alt="Profile Icon">
+                </a>
             </div>
-        <h3>andrea[@]ongomefen.com</h3>
-        <p>Please reach out via email or phone for inquiries.</p>
+            
+            <div class="email-icon glass-box">
+                <a href="mailto:andreaongomefen@gmail.com">
+                    <img src="https://png.pngtree.com/png-vector/20250423/ourmid/pngtree-cute-pink-envelope-with-white-flap-and-soft-corners-png-image_16041102.png"
+                         alt="Email Icon">
+                </a>
+            </div>
+            
+            
+
+            
+        
     </main>
     <footer>
+        <div class="home-footer">
+                <p>andrea[@]ongomefen.com | Please reach out via email or phone for inquiries.</p>
         <p>&copy; 2023 Your Name</p>
+        </div>
     </footer>
 </body>
 </html>
