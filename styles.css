@@ -63,12 +63,17 @@ header {
   font-size: 1rem;
   color: var(--primary);
   margin-bottom: 0.5rem;
+  
 }
 
 .nav-container nav a {
   color: var(--text-dark);
   text-decoration: none;
   padding: 0 0.5rem;
+}
+.nav-container nav a: hover{
+    transform: translate(10px)
+    box-shadow:0 12px 30px rgba(0, 0, 0, 0.15)
 }
 
 .glass-box {
@@ -351,7 +356,7 @@ header {
 }
 .top-right {
     position: fixed;
-    top: 5%;
+    top: 10%;
     left: 50%;
     right: 50%;
     
@@ -372,6 +377,41 @@ header {
 
     font-family: 'Verdana', sans-serif;   /* Apply everywhere */
     color: hotpink;                             /* Pink text */
+}
+.new-nav {
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    background-color: white;
+}
+.new-nav p {
+    margin: 10px;
+    float: center;
+    font-family:'Unica One', sans-serif;
+}
+.new-nav a {
+    color: pink;
+    text-decoration: none;
+}
+
+.new-nav a:hover {
+    color: hotpink;
+    box-shadow: 0 12px 30px pink;
+    cursor: pointer;
+}
+
+.new-nav img {
+    margin-right: 10px;
+    height: 50px;
+    width: 45px;
+    float: left;
 }
 
 /* Title */
@@ -556,7 +596,7 @@ header {
 }
 /* _______________________Projects Page_________________________*/
 .pr-bg {
-    background-image: url("https://i.pinimg.com/1200x/dd/3d/bc/dd3dbc2540c96c85c14836bf4b560762.jpg");
+    background-image: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW91bnRhaW4lMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D");
     background-size: cover;         /* fills width + expands vertically */
     background-repeat: no-repeat;
     background-attachment: scroll;   /* stays fixed while scrolling */
