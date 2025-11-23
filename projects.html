@@ -12,9 +12,9 @@
   <header>
     <div class="pr-bg"></div>
     <nav class="pr-nav glass-box">
-      <a href="#"><p>repositories & projects</p></a>
-      <a href="#"><p>| Home |</p></a>
-      <a href="#"><p>more information & data sets</p></a>
+      <a href="#"><p>Repos & Projects</p></a>
+      <a href="home.html"><p> |    Home    |  </p></a>
+      <a href="#"><p>More info & Datasets</p></a>
     </nav>
   </header>
 
@@ -43,7 +43,7 @@
           <div class="project-card glass-box" data-index="2">
               <h2>About Me</h2>
               <a href="contacts.html">
-                  <img class="night-sky" src="https://i.pinimg.com/736x/15/45/25/1545251bd5e765724bffe0f4d9567080.jpg">
+                  <img class="night-sky" src="https://i.pinimg.com/1200x/31/cf/94/31cf947b77fb23437336d27d7558cf7a.jpg">
               </a>
               <p>Learn more about me and reach out!</p>
           </div>
@@ -51,7 +51,9 @@
         </section>
 </br>
 
-    <a href="#preview-grid" class="scroll-down-glass" style="display:inline-block; float: center; align-items: center;">
+    <a href="#preview-grid" class="scroll-down-glass" style="display:inline-block; float: center; align-items: center; margin:  0 auto; position: absolute;
+      left: 50%;
+      transform: translateX(-50%);">
         
         <div class="arrow">
             
@@ -62,6 +64,8 @@
         </div>
 
     </a>
+</br>
+</br>
 </br>
     <section>
       <div id="preview-grid" class="preview-grid"></div>
@@ -112,25 +116,45 @@
       const pages = [
         {
           title: "Global CO2 Emissions",
-          desc: "Open GitHub repository (nbviewer preview)",
+          desc: "Lowest and Highest Global Emitters",
           img: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202510/co2-emission-122758208-16x9.jpg",
           link: "https://github.com/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb",
           iframe: "https://nbviewer.org/github/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb"
         },
         {
-          title: "Game",
-          desc: "Play now",
-          img: "https://picsum.photos/400?game1",
-          link: "https://your-game-link.com",
-          iframe: "https://your-game-link.com"
+          title: "Employee Absence Tracker",
+          desc: "Employee Absence Tracker and other snippets",
+          img: "https://day-off.app/wp-content/uploads/2024/06/employee_attendance_issues_1200x630.jpg",
+          link: "https://github.com/AOngomefen/Employee-Absence-Tracker",
+          iframe: "https://github.com/AOngomefen/Employee-Absence-Tracker/blob/main/EmployeeAbsenceTracker.cpp"
         },
         {
-          title: "Hotel Occupancy",
-          desc: "Play now",
-          img: "https://picsum.photos/400?game1",
-          link: "https://your-game-link.com",
-          iframe: "https://your-game-link.com"
+          title: "Unit Converter",
+          desc: "Metric Conversion Calculator and other snippets",
+          img: "https://www.nist.gov/sites/default/files/styles/960_x_960_limit/public/images/2022/10/11/SI-Units-Ali-DM-Shutterstock.jpg?itok=nHPySjk0",
+          link: "https://github.com/AOngomefen/Unit-Converter",
+          iframe: "https://github.com/AOngomefen/Unit-Converter/blob/main/main.cpp"
         },
+        {
+           title: "Hotel Occupancy",
+           desc: "Hotel Occupancy and Checker, summary (testing loops)",
+           img: "https://www.creativefabrica.com/wp-content/uploads/2021/03/20/Travel-icon-hotel-design-creative-vector-Graphics-9793005-1.jpg",
+           link: "https://github.com/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb",
+           iframe: "https://nbviewer.org/github/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb"
+        },
+        {
+           title: "Ticket Booth ",
+           desc: "Movie Tickets & Input Validation",
+           img: "https://cdn-icons-png.flaticon.com/512/4009/4009142.png",
+           link: "https://github.com/AOngomefen/Employee-Absence-Tracker",
+           iframe: "https://github.com/AOngomefen/Employee-Absence-Tracker/blob/main/EmployeeAbsenceTracker.cpp"
+        },
+        {
+          title: "Womens Happiness Index ",
+          desc: "Womens Happiness Global Index Based on Economic and Social Factors",
+          img: "https://media.istockphoto.com/id/1211578421/vector/young-woman-sits-on-floor-meditating-and-performing-breath-control-exercise.jpg?s=612x612&w=0&k=20&c=wj_yPgM61tH1Sb9F0J_iAWNiDkZw9y6xjVjQIYajPIo=",
+           iframe: "https://github.com/AOngomefen/Unit-Converter/blob/main/main.cpp"
+         },
         // add up to 9 cards as needed...
       ];
 

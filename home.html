@@ -25,7 +25,7 @@ function closePopup() {
     <header>
         <div class="new-nav">   <img class="icon" src="https://media.licdn.com/dms/image/v2/D4E35AQHwxZ_5uMSCNw/profile-framedphoto-shrink_400_400/B4EZeu7ETXG4Ag-/0/1750986409629?e=1764439200&v=beta&t=RzrKe6B0Vm9Fj-i6UOkVBc15jl_n3ICyMboHZhMLG7U" ><h2> My Portfolio  </h2> <p>
             <a href="projects.html">  Projects      </a>
-            <a href="contacts.html"> About Me   </a>
+            <a href="contacts.html"> About   </a>
             <a href="#">   Experince      </a>
             <a href="#">  Skills      </a> </p>
         </div>
@@ -49,7 +49,7 @@ function closePopup() {
     <main>
         
             <div class="window-exe glass-box">
-                <a href="projects.html"> <embed class="window"  src="https://i.pinimg.com/1200x/38/e1/3b/38e13b05a6c42591967bbb27adcdac3d.jpg"> </embed> </a>
+                <a href="projects.html"> <embed class="window"  src="https://i.pinimg.com/originals/12/55/5d/12555d86c0827d4e78eb101d493c5ab6.gif"> </embed> </a>
     
         </div>
             <div class="profile-icon glass-box">
@@ -61,7 +61,7 @@ function closePopup() {
             
             <div class="email-icon glass-box">
                 <a href="https://open.spotify.com/playlist/37i9dQZEVXcQ9COmYvdajy">
-                    <img src="https://i.pinimg.com/originals/38/22/b5/3822b52cd689a711914dc8878a69e1f8.gif"
+                    <img src="https://static.vecteezy.com/system/resources/previews/024/514/559/non_2x/music-3d-icon-free-png.png"
                          alt="Email Icon">
                 </a>
             </div>
@@ -83,5 +83,50 @@ function closePopup() {
                 <br/>
         </div>
     </footer>
+    <!-- Popup overlay + box (accessible) -->
+    <div id="popupOverlay" class="overlay" hidden></div>
+    <div id="popupBox" class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popupTitle" hidden>
+      <button id="popupClose" class="btn-close" aria-label="Close popup">&times;</button>
+      <h3 id="popupTitle">Hello!</h3>
+      <p>This is a reversible popup example. It closes on Escape or by clicking outside.</p>
+    </div>
+
+    <!-- Scripts at end for performance -->
+    <script>
+      // Popup behavior
+      (function () {
+        const overlay = document.getElementById('popupOverlay');
+        const popup = document.getElementById('popupBox');
+        const closeBtn = document.getElementById('popupClose');
+
+        function showPopup() {
+          overlay.hidden = false;
+          popup.hidden = false;
+          overlay.style.display = 'block';
+          popup.style.display = 'block';
+          popup.focus && popup.focus();
+        }
+        function hidePopup() {
+          overlay.hidden = true;
+          popup.hidden = true;
+          overlay.style.display = 'none';
+          popup.style.display = 'none';
+        }
+
+        // Close handlers
+        closeBtn.addEventListener('click', hidePopup);
+        overlay.addEventListener('click', hidePopup);
+        window.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') hidePopup();
+        });
+
+        // Expose for demo / future use
+        window.showPopup = showPopup;
+        window.hidePopup = hidePopup;
+      })();
+    </script>
+
+    <!-- Optional bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
