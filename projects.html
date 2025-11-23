@@ -1,147 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 
-    <style>
-        /* Prevent text overflow */
-        .project-card p,
-        .project-card h2 {
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            hyphens: auto;
-        }
-
-        /* Carousel Layout */
-        .carousel {
-            position: relative;
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .carousel-track {
-            display: flex;
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .project-card {
-            min-width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        /* Nav Buttons */
-        .nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 10px 15px;
-            border: none;
-            background: rgba(255,255,255,0.3);
-            backdrop-filter: blur(8px);
-            cursor: pointer;
-            font-size: 20px;
-        }
-
-        .nav.left { left: 10px; }
-        .nav.right { right: 10px; }
-
-        iframe {
-            border: none;
-            width: 100%;
-            height: 350px;
-        }
-
-        .hidden { display: none; }
-    </style>
 </head>
+
 <body>
-    <header>
-        <div class="pr-bg"> </div>
-        <nav class="pr-nav glass-box" >
-            <p> </p>
-        </nav>
-    </header>
+  <header>
+    <div class="pr-bg"></div>
+    <nav class="pr-nav glass-box">
+      <a href="#"><p>repositories & projects</p></a>
+      <a href="#"><p>| Home |</p></a>
+      <a href="#"><p>more information & data sets</p></a>
+    </nav>
+  </header>
 
-    <main>
+  <main>
+    
         <section class="project-gallery">
-            <div class="project-card active glass-box">
-                <h2>Global CO2 Emissions</h2>
-                <iframe src="https://nbviewer.org/github/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb"></iframe>
-                <p>Global CO₂ emissions analysis 2000–2014, trends & comparisons.</p>
-            </div>
 
-            <div class="project-card glass-box">
-                <h2>Spline 3D Rendering</h2>
-                    <iframe
-                            class="spline-bg"
-                            src="https://my.spline.design/portbg-OKmY0kJ1rSPRTbkE1otWWy6U/"
-                            frameborder="0"
-                            allow="scroll"
-                    ></iframe>
-                <p>an interactive beckground through a 3D animation renderer, spline.</p>
-            </div>
-            
-            <div class="project-card glass-box">
-                <h2>Spline 3D Rendering</h2>
-                    <iframe
-                            class="spline-bg"
-                            src="https://my.spline.design/portbg-OKmY0kJ1rSPRTbkE1otWWy6U/"
-                            frameborder="0"
-                            allow="scroll"
-                    ></iframe>
-                <p>an interactive beckground through a 3D animation renderer, spline.</p>
-            </div>
+          <div class="gallery-nav">
+              <button id="prevBtn" class="prev">‹</button>
+              <h2 class="spot-title">Spotlight</h2>
+              <button id="nextBtn" class="next">›</button>
+          </div>
 
-            <div class="project-card glass-box">
-                <h2>About Me</h2> <a href="contacts.html">
-                <img class="night-sky" src="https://i.pinimg.com/736x/15/45/25/1545251bd5e765724bffe0f4d9567080.jpg " alt="night sky" border-radius="14px" > </a>
-                <p>Learn more about me and reach out!</p>
-            </div>
+          <div class="project-card active glass-box" data-index="0">
+              <h2>Global CO2 Emissions</h2>
+              <iframe src="https://nbviewer.org/github/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb"></iframe>
+              <p>Global CO₂ emissions analysis 2000–2014, trends & comparisons.</p>
+          </div>
 
-            <div class="gallery-nav">
-                <button class="prev" onclick="prevSlide()">‹</button>
-                <button class="next" onclick="nextSlide()">›</button>
-            </div>
+          <div class="project-card glass-box" data-index="1">
+              <h2>Spline 3D Rendering</h2>
+              <iframe class="spline-bg" src="https://my.spline.design/portbg-OKmY0kJ1rSPRTbkE1otWWy6U/"></iframe>
+              <p>An interactive background through Spline.</p>
+          </div>
+
+          <div class="project-card glass-box" data-index="2">
+              <h2>About Me</h2>
+              <a href="contacts.html">
+                  <img class="night-sky" src="https://i.pinimg.com/736x/15/45/25/1545251bd5e765724bffe0f4d9567080.jpg">
+              </a>
+              <p>Learn more about me and reach out!</p>
+          </div>
+
         </section>
+</br>
 
-    </main>
+    <a href="#preview-grid" class="scroll-down-glass" style="display:inline-block; float: center; align-items: center;">
+        
+        <div class="arrow">
+            
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="pink" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
 
-    <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
-    </footer>
-    <script>
-        let currentSlide = 0;
+    </a>
+</br>
+    <section>
+      <div id="preview-grid" class="preview-grid"></div>
+    </section>
+  </main>
 
-        // Select slides AFTER DOM is loaded
-        const slides = document.querySelectorAll(".project-gallery .project-card");
+  <footer style="text-align:center; padding:20px 0;">
+    <p>&copy; 2023 Your Name. All rights reserved.</p>
+  </footer>
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove("active");
-                if (i === index) slide.classList.add("active");
-            });
-        }
+  <!-- JavaScript: runs after DOM is parsed -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // ---- Carousel logic ----
+      const slides = document.querySelectorAll(".project-gallery .project-card");
+      let currentSlide = 0;
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
+      function showSlide(index) {
+        if (!slides || slides.length === 0) return;
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+      }
 
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
 
-        // Optional: autoplay every 5 seconds
-       /* setInterval(() => nextSlide(), 5000); */
-    </script>
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      // wire buttons
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      prevBtn && prevBtn.addEventListener("click", prevSlide);
+      nextBtn && nextBtn.addEventListener("click", nextSlide);
+
+      // Optional: keyboard nav
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") nextSlide();
+        if (e.key === "ArrowLeft") prevSlide();
+      });
+
+      // ---- Preview grid generation ----
+      const pages = [
+        {
+          title: "Global CO2 Emissions",
+          desc: "Open GitHub repository (nbviewer preview)",
+          img: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202510/co2-emission-122758208-16x9.jpg",
+          link: "https://github.com/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb",
+          iframe: "https://nbviewer.org/github/AOngomefen/DATA-110-21843/blob/main/Project1_assignment_fall25.ipynb"
+        },
+        {
+          title: "Game",
+          desc: "Play now",
+          img: "https://picsum.photos/400?game1",
+          link: "https://your-game-link.com",
+          iframe: "https://your-game-link.com"
+        },
+        {
+          title: "Hotel Occupancy",
+          desc: "Play now",
+          img: "https://picsum.photos/400?game1",
+          link: "https://your-game-link.com",
+          iframe: "https://your-game-link.com"
+        },
+        // add up to 9 cards as needed...
+      ];
+
+      const grid = document.getElementById("preview-grid");
+
+      // generate 3x3 placeholders if you want exactly 9 cards:
+      // (here we only use existing 'pages' entries; you can expand this array)
+      pages.forEach((page, idx) => {
+        const card = document.createElement("div");
+        card.className = "preview-card glass-box";
+        card.innerHTML = `
+          <a class="card-link" href="${page.link}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+            <img class="preview-frame" src="${page.img}" alt="${page.title} preview">
+            <div class="preview-card-content">
+              <h3 style="margin:0 0 6px;">${page.title}</h3>
+              <p style="margin:0; font-size:0.92rem; color:#ffdcee;">${page.desc}</p>
+            </div>
+          </a>
+        `;
+        grid.appendChild(card);
+      });
+
+      // ---- Helpful console message ----
+      console.log("Gallery and preview grid initialized. Slides:", slides.length, "Preview cards:", grid.children.length);
+    });
+  </script>
 </body>
 </html>
-
-

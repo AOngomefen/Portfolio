@@ -282,9 +282,9 @@ header {
 }
 
 /* ______________________ home Page_______________________ */
-
+/* https://i.pinimg.com/736x/44/d4/71/44d4713e3279b13500cae6671c0cf3a5.jpg */
 .home-bg {
-    background-image: url("https://i.pinimg.com/736x/44/d4/71/44d4713e3279b13500cae6671c0cf3a5.jpg");
+    background-image: url("https://i.pinimg.com/736x/70/15/fd/7015fd7723077f2ee564eb2106305c68.jpg");
     background-size: cover;         /* fills width + expands vertically */
     background-repeat: no-repeat;
     background-attachment: scroll;   /* stays fixed while scrolling */
@@ -378,40 +378,59 @@ header {
     font-family: 'Verdana', sans-serif;   /* Apply everywhere */
     color: hotpink;                             /* Pink text */
 }
+
 .new-nav {
-    margin: auto;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    right: 0%;
     width: 100%;
-    text-align: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    margin: 0;
+    left: 0;
+    right: 0;
     display: flex;
-    justify-content: center;
-    height: auto;
-    background-color: white;
 }
-.new-nav p {
+.new-nav h2 {
+    text-shadow: pink;
+    color: white;
+    float: left;
+    font-weight: 500;
+    font-family:'Verdana', sans-serif;
+    
+}
+.new-nav p, .new-nav h2 {
     margin: 10px;
     float: center;
-    font-family:'Unica One', sans-serif;
+    font-family:'Verdana', sans-serif;
+    gap: 3px;
+    
+    
 }
 .new-nav a {
     color: pink;
+    font-size: 1.05rem;
+    font-weight: 400;
     text-decoration: none;
 }
 
 .new-nav a:hover {
     color: hotpink;
-    box-shadow: 0 12px 30px pink;
+    text-shadow: 0 12px 30px pink;
     cursor: pointer;
+    space: 2rem;
 }
 
 .new-nav img {
     margin-right: 10px;
-    height: 50px;
-    width: 45px;
+    height: 90px;
+    width: 90px;
     float: left;
+    left: 10;
+    border-radius: 100%;
+    border-image: 10px;
+    border-color: white;
+    
 }
 
 /* Title */
@@ -467,6 +486,9 @@ header {
     font-family: 'Unica One', sans-serif;
     position: fixed;
     bottom: 0%;
+    display: flex;
+    color: white;
+    
     
     
 }
@@ -608,44 +630,84 @@ header {
     border: none;
     z-index: -1;
 }
+.pr-nav, .pr-nav p, .pr-nav a {
+    display: flex;
+    top: 0;
+    float: center;
+    text-overline-color: white;
+    text-underline: none;
+    text-align: center;
+    
+}
 
 .project-gallery {
     position: relative;
+    text-align: center;
     max-width: 900px;
-    margin: 50px auto;
-    font-family: 'Verdana', sans-serif;
+    margin: 80px auto;
     color: pink;
 }
 
-/* Project card styling */
-.project-card {
-    display: none; /* hide all cards initially */
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
+/* NAVIGATION BAR INSIDE THE GALLERY */
+.gallery-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* left, center, right alignment */
     margin-bottom: 20px;
-    transition: opacity 0.6s ease-in-out, transform 0.4s ease;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px) saturate(150%);
-    -webkit-backdrop-filter: blur(10px) saturate(150%);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 14px;
+    position: relative;
 }
 
-/* Show the active slide */
+.spot-title {
+    margin: 0 auto;
+    color: white;
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px rgba(255,0,150,0.4);
+}
+
+/* Arrows */
+.gallery-nav button {
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    padding: 10px 18px;
+    font-size: 26px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-nav button:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* FIXED CARDS */
+.project-card {
+    display: none;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(14px) saturate(180%);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    float: center;
+    align-items:center;
+    margin: auto;
+    
+
+    
+}
+
 .project-card.active {
     display: block;
-    opacity: 1;
 }
 
-/* Iframe inside cards */
+/* Iframe */
 .project-card iframe {
     width: 100%;
     height: 350px;
-    border: none;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 10px;
 }
+
 
 /* Gallery navigation buttons */
 .gallery-nav button {
@@ -668,9 +730,97 @@ header {
 .gallery-nav button:hover {
     background: rgba(255, 255, 255, 1);
 }
-.project-card glass-box night-sky img{
-    height: 300px;
-    width: 300px;
-    border-radius: 14px;
-    
+.arrow {
+    margin: auto;
+     width:48px;
+     height:48px;
+     display:flex;
+     align-items:center;
+     justify-content:center;
+     border-radius:50%;
+     background:rgba(255,255,255,0.12);
+     backdrop-filter:blur(10px) saturate(180%);
+     border:1px solid rgba(255,255,255,0.25);
+     cursor:pointer;
 }
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 30px;
+}
+
+.preview-card {
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  position: relative;
+}
+
+.preview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(255, 105, 180, 0.5);
+  border: 1.5px solid rgba(255, 105, 180, 0.75);
+}
+
+/* Iframe preview */
+.preview-frame {
+  width: 100%;
+  height: 180px;
+  border: none;
+  pointer-events: none; /* ensures hover works */
+  opacity: 0.85;
+}
+
+.preview-card-content {
+  padding: 18px;
+}
+
+.preview-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  color: white;
+}
+
+.preview-card p {
+  color: #ffb7dd;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.preview-grid {
+    display:grid;
+    grid-template-columns:
+    repeat(3,1fr); gap:20px;
+    max-width:1100px;
+    margin: 32px auto;
+    padding: 0 10px;
+}
+.preview-card {
+    border-radius:14px;
+    overflow:hidden; cursor:pointer;
+    background: rgba(255,255,255,0.04);
+    padding-bottom:8px;
+    transition: transform .25s,
+    box-shadow .25s;
+}
+.preview-card img {
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    display:block;
+}
+.preview-card:hover {
+    transform:translateY(-6px);
+    box-shadow:0 16px 40px rgba(255,105,180,0.15);
+}
+.preview-card-content { 
+    padding:12px;
+}
+
